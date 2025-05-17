@@ -1,0 +1,61 @@
+{
+    "name": "acf/zap-text-block",
+    "title": "Zap Text Block",
+    "description": "A custom zap-text-block block that uses ACF fields.",
+    "style": [ "file:./zap-text-block.css" ],
+    "category": "formatting",
+    "icon": "editor-paragraph",
+    "keywords": ["rabbittext", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "zap-text-block.php"
+    },
+     "attributes": {
+        "style": {
+            "type": "object",
+            "default": {
+                "spacing": {
+                    "margin": {
+                        "bottom": "0rem",
+                        "top": "0rem"
+                    },
+                    "padding": "1rem"
+                },
+                "background": {
+                    "backgroundImage": {
+                        "url": "IMAGE_URL"
+                    },
+                    "backgroundPosition": "50% 50%",
+                    "backgroundSize": "cover"
+                }
+            }
+        },
+        "backgroundColor": {
+            "type": "string"
+        },
+        "spacing": {
+            "type": "string"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "var:preset|color|contrast"
+        }
+    },
+    "supports": {
+        "anchor": true,
+        "align": true,
+        "html": true,
+        "jsx": true,
+        "mode": true,
+        "margin": true,
+        "padding": true,
+        "spacing": {
+            "margin": true,
+            "padding": true
+        },
+        "color": {
+            "background": true,
+            "text": true
+        }
+    }
+}
