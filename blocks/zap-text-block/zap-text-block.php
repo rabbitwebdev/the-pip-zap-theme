@@ -67,7 +67,6 @@ $is_preview = isset($is_preview) ? $is_preview : false;
         </div>
     </div>
 
-
    <?php if ( $the_wp_image ) : ?>
         <div class="wp-block-column">
               <figure class="wp-block-image size-full <?php if ($sticky_image) { echo 'is-sticky'; } ?>" style="margin-bottom:0px;">

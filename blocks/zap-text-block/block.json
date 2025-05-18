@@ -10,6 +10,13 @@
         "mode": "preview",
         "renderTemplate": "zap-text-block.php"
     },
+     "settings": {
+        	"appearanceTools": true,
+		"typography": {
+			"fontWeight": "900",
+           "fontFamily": "Montserrat, sans-serif"
+		}
+	},
      "attributes": {
         "style": {
             "type": "object",
@@ -28,13 +35,20 @@
                     "backgroundPosition": "50% 50%",
                     "backgroundSize": "cover"
                 }
-            }
+            },
+             "typography": {
+            "fontSize": true,
+            "lineHeight": true,
+           	"fontWeight": "900",
+           "fontFamily": "Montserrat, sans-serif",
+            "textTransform": true,
+            "textDecoration": true,
+            "textAlign": true
+        }
         },
         "backgroundColor": {
-            "type": "string"
-        },
-        "spacing": {
-            "type": "string"
+            "type": "string",
+            "default": "var:preset|color|accent-5"
         },
         "textColor": {
             "type": "string",
@@ -46,12 +60,20 @@
         "align": true,
         "html": true,
         "jsx": true,
+        "typography": {
+            "fontSize": true,
+            "lineHeight": true,
+           	"fontWeight": "900",
+           "fontFamily": "Montserrat, sans-serif",
+            "textTransform": true,
+            "textDecoration": true,
+            "textAlign": true
+        },
         "mode": true,
-        "margin": true,
-        "padding": true,
         "spacing": {
             "margin": true,
-            "padding": true
+            "padding": true,
+            "blockGap": "var:preset|spacing|50"
         },
         "color": {
             "background": true,
