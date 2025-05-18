@@ -15,7 +15,7 @@ $content_align = get_field('content_align');
 $sticky_image = get_field('sticky_image');
 $button_link = get_field('button_link');
 $button_style = get_field('button_style');
-$the_wp_image = get_field('the_wp_image');
+$block_image = get_field('block_image');
 $wp_object_image = get_field('wp_object_image');
 
 if($content_align == 'center') {
@@ -67,11 +67,11 @@ $is_preview = isset($is_preview) ? $is_preview : false;
         </div>
     </div>
 
-   <?php if ( $the_wp_image ) : ?>
+   <?php if ( $block_image ) : ?>
         <div class="wp-block-column">
               <figure class="wp-block-image size-full <?php if ($sticky_image) { echo 'is-sticky'; } ?>" style="margin-bottom:0px;">
                                 
-                               <img class="wp-image-207901" src="<?php echo esc_url($the_wp_image['url']); ?>" alt="<?php echo esc_attr($the_wp_image['alt']); ?>" style="aspect-ratio:4/3;object-fit:<?php echo $wp_object_image ; ?>;width: 100%;" />
+                               <img class="wp-image-207901" src="<?php echo esc_url($block_image['url']); ?>" alt="<?php echo esc_attr($block_image['alt']); ?>" style="aspect-ratio:4/3;object-fit:<?php echo $wp_object_image ; ?>;width: 100%;" />
                             </figure>
          
         </div>
