@@ -57,7 +57,7 @@ $is_preview = isset($is_preview) ? $is_preview : false;
 <div <?php echo esc_attr( $anchor ); ?>class="<?php echo esc_attr( $class_name ); ?>  wp-block-group alignfull " style="<?php echo esc_attr( $style ); ?>">
   <div class="container">
     <div class="row <?php echo $content_align ; ?>">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="txt-wrp">
                 <?php echo $block_content ; ?>    
                 <?php if ($button_link) : ?>
@@ -65,21 +65,16 @@ $is_preview = isset($is_preview) ? $is_preview : false;
                 <?php endif; ?>
             </div>
         </div>
+         <?php if ( $block_image ) : ?>
+            <div class="col">
+                <figure class="wp-block-image size-full <?php if ($sticky_image) { echo 'is-sticky'; } ?>" style="margin-bottom:0px;">  
+                    <img class="wp-image-207901" src="<?php echo esc_url($block_image['url']); ?>" alt="<?php echo esc_attr($block_image['alt']); ?>" style="aspect-ratio:4/3;object-fit:<?php echo $wp_object_image ; ?>;width: 100%;" />
+                </figure>
+            
+            </div>
+        <?php endif; ?>
     </div>
-
-   <?php if ( $block_image ) : ?>
-        <div class="wp-block-column">
-              <figure class="wp-block-image size-full <?php if ($sticky_image) { echo 'is-sticky'; } ?>" style="margin-bottom:0px;">
-                                
-                               <img class="wp-image-207901" src="<?php echo esc_url($block_image['url']); ?>" alt="<?php echo esc_attr($block_image['alt']); ?>" style="aspect-ratio:4/3;object-fit:<?php echo $wp_object_image ; ?>;width: 100%;" />
-                            </figure>
-         
-        </div>
-    <?php endif; ?>
-   
 </div>
-
- 
 </div>
 <?php if (!$is_preview) { ?>
     </div>
